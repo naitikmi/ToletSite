@@ -93,6 +93,7 @@ app.use((req,res,next)=>{
 app.use("/listings",listings);
 app.use("/listings/:id/review",reviews);
 app.use("/",userRoutes);
+app.use("/",listings);
 
 app.all("*",(req,res,next)=>{
     next(new ExpressError("Page not found",404));
